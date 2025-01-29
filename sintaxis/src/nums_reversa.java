@@ -1,13 +1,13 @@
 import java.util.*;
 
-public class nums_impares {
+public class nums_reversa {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce un numero entero positivo: ");
+        System.out.println("Ingresa un numero entero positivo: ");
         int n = sc.nextInt();
-
-        for (int i = 1; i <= n; i++) {
-            if(i%2 !=0) {
+        
+        for (int i = n; i >= 0; i--) {
+            if (i >= 0) {
                 System.out.print(i + " ,");
             }
         }
