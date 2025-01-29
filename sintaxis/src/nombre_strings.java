@@ -25,6 +25,6 @@ public class nombre_strings {
         char materno_mayus = Character.toUpperCase(letra_materno);
 
         System.out.print("Tu nombre completo es: ");
-        System.out.println(nombre_mayus + paterno_mayus + apellido_paterno.substring(1,apellido_paterno.length()).toLowerCase() + " " + materno_mayus + apellido_materno.substring(1,apellido_materno.length()).toLowerCase());
+        System.out.println(nombre_mayus + nombre.substring(1,nombre.length()).toLowerCase() + " " + paterno_mayus + apellido_paterno.substring(1,apellido_paterno.length()).toLowerCase() + " " + materno_mayus + apellido_materno.substring(1,apellido_materno.length()).toLowerCase());
     }
 }
