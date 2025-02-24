@@ -2,27 +2,23 @@ package Practica8;
 
 public class principal {
     public static void main(String[] args) {
-        spartan miSpartan = new spartan();
-        spartan noble = new spartan();
-
-        miSpartan.nombre = "Master Chief";
-        miSpartan.salud = 100;
-        miSpartan.escudo = 80;
-        miSpartan.armaPrincipal = "Assault Rifle";
+        spartan miSpartan = new spartan("Assault Rifle",80,"Master Chief",100);
+        spartan noble = new spartan("Shotgun", 50, "Emile", 100);
 
         miSpartan.mostrarInfo();
         miSpartan.atacar("Grunt");
         miSpartan.recargarArma(70);
         miSpartan.correr(true);
 
-        noble.nombre = "Emile";
-        noble.salud = 100;
-        noble.escudo = 50;
-        noble.armaPrincipal = "Shotgun";
-
         noble.mostrarInfo();
         noble.atacar("Elite Zealot");
         noble.recargarArma(8);
         noble.correr(false);
+
+        //Modificar el valor de Master Chief
+        miSpartan.setNombre("Yo");
+        miSpartan.mostrarInfo();
+        System.out.println("Nombre del Spartan despues del cambio: " + miSpartan.getNombre());
+
     }
 }

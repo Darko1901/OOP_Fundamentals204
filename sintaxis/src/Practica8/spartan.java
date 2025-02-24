@@ -1,10 +1,24 @@
 package Practica8;
 
 public class spartan {
-    public String nombre;
-    public int salud;
-    public int escudo;
-    public String armaPrincipal;
+    
+    //Atributos del Spartan
+
+    private String nombre;
+    private int salud;
+    private int escudo;
+    private String armaPrincipal;
+
+    //Constructor del Spartan
+
+    public spartan(String armaPrincipal, int escudo, String nombre, int salud) {
+        this.armaPrincipal = armaPrincipal;
+        this.escudo = escudo;
+        this.nombre = nombre;
+        this.salud = salud;
+    }
+
+    //Metodos del spartan
 
     public void mostrarInfo(){
         System.out.println("-----------Informacion del Spartan------------");
@@ -27,5 +41,43 @@ public class spartan {
         }else{
             System.out.println("El spartan no esta corriendo");
         }
+    }
+
+    private void consultarACortana(){
+        System.out.println("Consultando a Cortana");
+    }
+
+    //Getters y Setters
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getSalud() {
+        return salud;
+    }
+
+    public void setSalud(int salud) {
+        this.salud = salud;
+    }
+
+    public int getEscudo() {
+        return escudo;
+    }
+
+    public void setEscudo(int escudo) {
+        this.escudo = escudo;
+    }
+
+    public String getArmaPrincipal() {
+        return armaPrincipal;
+    }
+
+    public void setArmaPrincipal(String armaPrincipal) {
+        this.armaPrincipal = armaPrincipal;
     }
 }
