@@ -3,10 +3,21 @@ package Practica9;
 import javax.swing.JOptionPane;
 
 public class cuenta {
-    public int num_cuenta;
-    public String titular;
-    public int edad;
-    public Double saldo;
+    private int num_cuenta;
+    private String titular;
+    private int edad;
+    private Double saldo;
+
+
+    public cuenta(int num_cuenta, String titular, int edad) {
+        this.num_cuenta = num_cuenta;
+        this.titular = titular;
+        this.edad = edad;
+    }
+
+    public cuenta(Double saldo) {
+        this.saldo = saldo;
+    }
 
     public void consultarSaldo(){
         JOptionPane.showMessageDialog(null, "Saldo del titular de la cuenta: " + saldo);
@@ -29,5 +40,37 @@ public class cuenta {
             saldo -= monto;
             JOptionPane.showMessageDialog(null, "Se ha depositado " + monto + " a la cuenta " + cuentaDestino);
         }
+    }
+
+    public int getNum_cuenta() {
+        return num_cuenta;
+    }
+
+    public void setNum_cuenta(int num_cuenta) {
+        this.num_cuenta = num_cuenta;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(Double saldo) {
+        this.saldo = saldo;
     }
 }

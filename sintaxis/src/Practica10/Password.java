@@ -4,7 +4,16 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 
 public class Password {
-    public String pass;
+    private String pass;
+
+    public Password(String pass) {
+        this.pass = pass;
+    }
+
+    // Añadir un constructor por default
+    public Password() {
+        this.pass = "";
+    }
 
     public String generarPassword(int longitud, boolean incluirMayusculas, boolean incluirEspeciales, boolean incluirNumeros) {
         String minusculas = "abcdefghijklmnopqrstuvwxyz";
@@ -44,5 +53,13 @@ public class Password {
         } else {
             JOptionPane.showMessageDialog(null, "La contraseña no es fuerte.");
         }
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }

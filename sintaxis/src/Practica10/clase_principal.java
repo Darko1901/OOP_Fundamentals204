@@ -17,9 +17,9 @@ public class clase_principal {
                     mostrarMenuGenerarPassword(password);
                     break;
                 case 1:
-                    if (password.pass != null && !password.pass.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Contraseña a comprobar: " + password.pass);
-                        password.comprobarFortaleza(password.pass);
+                    if (password.getPass() != null && !password.getPass().isEmpty()) {
+                        JOptionPane.showMessageDialog(null, "Contraseña a comprobar: " + password.getPass());
+                        password.comprobarFortaleza(password.getPass());
                     } else {
                         String pass = JOptionPane.showInputDialog("Ingrese la contraseña a comprobar:");
                         JOptionPane.showMessageDialog(null, "Contraseña a comprobar: " + pass);
@@ -27,7 +27,6 @@ public class clase_principal {
                     }
                     break;
                 case 2:
-                    JOptionPane.showMessageDialog(null, "Gracias por usar el sistema.");
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opción no válida.");
@@ -72,8 +71,8 @@ public class clase_principal {
                     incluirNumeros = true;
                     break;
                 case 3:
-                    password.pass = password.generarPassword(longitud, incluirMayusculas, incluirEspeciales, incluirNumeros);
-                    JOptionPane.showMessageDialog(null, "Contraseña generada: " + password.pass);
+                    password.setPass(password.generarPassword(longitud, incluirMayusculas, incluirEspeciales, incluirNumeros));
+                    JOptionPane.showMessageDialog(null, "Contraseña generada: " + password.getPass());
                     break;
                 default:
                     JOptionPane.showMessageDialog(null, "Opción no válida.");

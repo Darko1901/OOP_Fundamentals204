@@ -4,17 +4,15 @@ import javax.swing.JOptionPane;
 
 public class clase_principal {
     public static void main(String[] args) {
-        cuenta miCuenta = new cuenta();
 
         // Solicitar datos
         String titular = JOptionPane.showInputDialog("Ingrese el nombre del titular:");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del titular:"));
         int num_cuenta = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número de cuenta:"));
 
-        miCuenta.titular = titular;
-        miCuenta.edad = edad;
-        miCuenta.num_cuenta = num_cuenta;
-        miCuenta.saldo = 500.0;
+        cuenta miCuenta = new cuenta(num_cuenta, titular, edad);
+
+        miCuenta.setSaldo(500.00);
 
         // Mostrar el saldo inicial
         miCuenta.consultarSaldo();
