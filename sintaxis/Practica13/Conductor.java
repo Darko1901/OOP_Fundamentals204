@@ -18,7 +18,7 @@ public class Conductor {
         return new Conductor(nombre, licencia);
     }
 
-    // Getters and setters
+    // Get y Set
     public String getNombre() {
         return nombre;
     }
