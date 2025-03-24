@@ -51,7 +51,7 @@ public class matricula {
         this.carrera = carrera;
     }
 
-    // GETTERS Y SETTERS
+    // Metodos GETTERS Y SETTERS
 
     public String getNombre() {
         return nombre;
