@@ -21,7 +21,6 @@ public class matricula {
 
     public void crearMatricula(){
         //StringBuilder para toda la matricula
-        // StringBuilder matriculaString = new StringBuilder();
         StrMat.append(nombre.substring(0,1));
         StrMat.append(aPaterno.substring(0,2).toUpperCase());
         StrMat.append(aMaterno.substring(0,2).toUpperCase());
